@@ -1,5 +1,9 @@
 <template>
-  <div>test <Test /></div>
+  <div>
+    test<br />
+    <span>{{ msg }}</span>
+    <Test />
+</div>
 </template>
 
 <script lang="ts">
@@ -13,7 +17,7 @@ import store from './store';
     Test,
   },
 })
-export default class SaavuChatFlowEditor extends Vue {
+export default class AppOrLibName extends Vue {
   @Prop()
   private msg!: string;
 }
