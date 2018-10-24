@@ -1,0 +1,5 @@
+{
+  "name": "app-or-lib-name",
+  "version": "1.0.0",
+  "main": "dist/builds/AppOrLibName.umd.js"
+}
