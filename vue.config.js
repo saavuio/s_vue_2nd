@@ -1,6 +1,6 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  outputDir: path.resolve(__dirname, "./dist/builds"),
+  outputDir: path.resolve(__dirname, './dist/builds'),
   lintOnSave: false,
 };
