@@ -1,0 +1,7 @@
+node_modules
+dependencies/s_*
+
+.vscode
+.eslintrc.js
+.prettierrc
+tsconfig.json
