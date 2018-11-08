@@ -5,8 +5,8 @@ if [ -z $PROJECT_ROOT_PATH ]; then
 fi
 
 # folders required
-mkdir ${PROJECT_ROOT_PATH}/src
-mkdir ${PROJECT_ROOT_PATH}/dist
+mkdir ${PROJECT_ROOT_PATH}/src 2> /dev/null
+mkdir ${PROJECT_ROOT_PATH}/dist 2> /dev/null
 
 # scripts
 cp -a ./s_vue_2nd/templates/scripts ${PROJECT_ROOT_PATH}/scripts
