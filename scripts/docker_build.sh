@@ -14,4 +14,4 @@ echo "--------------------------------------------------------------------------
 echo
 echo
 
-docker build -t saavu-local/s_vue_2nd --build-arg container_user_id=$(id -u) .
+docker build -t saavu-local/s_vue_2nd_v4 --build-arg container_user_id=$(id -u) .
