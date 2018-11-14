@@ -8,10 +8,13 @@ fi
 mkdir ${PROJECT_ROOT_PATH}/src 2> /dev/null
 mkdir ${PROJECT_ROOT_PATH}/dist 2> /dev/null
 
-# scripts
-cp -a ./s_vue_2nd/templates/scripts ${PROJECT_ROOT_PATH}/scripts
+# link to self
 cp ./s_vue_2nd/templates/s_vue_2nd.sh ${PROJECT_ROOT_PATH}
 
+# scripts
+if [ ! -d ${PROJECT_ROOT_PATH}/scripts ]; then
+  cp -a ./s_vue_2nd/templates/scripts ${PROJECT_ROOT_PATH}/scripts
+fi
 # .gitignore skel
 if [ ! -f ${PROJECT_ROOT_PATH}/.gitignore ]; then
   cp ./s_vue_2nd/templates/gitignore ${PROJECT_ROOT_PATH}/.gitignore
