@@ -25,7 +25,9 @@ if [ ! -f $RUN_DIR/package.json ]; then
 fi
 
 dockerstop() {
-  docker stop -t 0 $(docker ps | grep $CONTAINER_NAME | cut -d' ' -f1) > /dev/null 2>&1
+  if [ ! -z $CONTAINER_NAME ]; then
+    docker stop -t 0 $(docker ps | grep $CONTAINER_NAME | cut -d' ' -f1) > /dev/null 2>&1
+  fi
 }
 if [ -z $RUN_IN_BG ]; then
   trap 'dockerstop' SIGINT SIGTERM EXIT
