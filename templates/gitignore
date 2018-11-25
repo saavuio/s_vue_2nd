@@ -6,3 +6,5 @@ dependencies/s_*
 .eslintrc.js
 .prettierrc
 tsconfig.json
+
+.DS_Store

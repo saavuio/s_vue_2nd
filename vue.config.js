@@ -6,4 +6,9 @@ module.exports = {
   css: {
     extract: false,
   },
+  chainWebpack: (config) => {
+    config
+      .plugin('friendly-errors')
+      .tap(() => [{ clearConsole: false }]);
+  },
 };
