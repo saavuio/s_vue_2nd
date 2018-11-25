@@ -1,10 +1,37 @@
-node_modules
-node_modules_app
-dependencies/s_*
+# Secrets
+.env*
+env-*
+!env-development
+now-token
 
+# Log files
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
 .vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Nuxt
+.nuxt
+
+# Node.js
+node_modules
+
+# Misc
+dist
 .eslintrc.js
 .prettierrc
 tsconfig.json
-
 .DS_Store
+
+# s_deps
+dependencies/s_*
+node_modules_app
