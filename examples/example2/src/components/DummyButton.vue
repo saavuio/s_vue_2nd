@@ -1,7 +1,10 @@
 <template>
-  <button @click="action">
+  <v-btn
+    :disabled="disabled"
+    @click="action"
+  >
     {{ text }}
-  </button>
+  </v-btn>
 </template>
 
 <script lang="ts">
@@ -13,6 +16,8 @@ export default class Root extends Vue {
   text!: string;
   @Prop({ type: Function, required: true, default: () => {} })
   action!: Function;
+  @Prop({ type: Boolean, default: false })
+  disabled!: boolean;
 }
 </script>
 

@@ -1,7 +1,13 @@
 <template>
-  <div class="index">
-    <Root />
-  </div>
+  <v-app>
+    <v-content>
+      <v-container>
+        <div class="index">
+          <Root />
+        </div>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script lang="ts">
@@ -18,8 +24,9 @@ export default class Index extends Vue {}
 
 <style scoped>
 .index {
+  font-family: sans-serif;
   background-color: #eee;
   margin: 15px 10px;
-  padding: 10px;
+  padding: 20px 30px;
 }
 </style>

@@ -1,14 +1,20 @@
 <template>
   <div>
-    Hello World {{ singleValue }}!
-    <br />
+    <h1>Hello World {{ singleValue }}!</h1>
+    <DummyButton
+      :action="generateListOfValues"
+      text="Generate a list of values"
+    />
     <br />
     <DummyButton
-      :text="buttonText"
-      :action="buttonAction" />
+      :disabled="loading"
+      :action="fetchListOfValues"
+      text="Fetch a list of values"
+    />
     <br />
     <br />
-    <pre>{{ listOfValues }}</pre>
+    <div v-if="loading">Loading...</div>
+    <pre v-if="!loading">{{ listOfValues }}</pre>
   </div>
 </template>
 
@@ -29,11 +35,12 @@ export default class Root extends Vue {
   singleValue!: string | undefined;
   @exampleVuexModule.State
   listOfValues!: [] | undefined;
+  @exampleVuexModule.State
+  loading!: boolean | undefined;
   @exampleVuexModule.Action
-  fetchNewListOfValues!: () => ({}) | undefined;
-
-  buttonText = 'Click';
-  buttonAction = this.fetchNewListOfValues;
+  generateListOfValues!: () => ({}) | undefined;
+  @exampleVuexModule.Action
+  fetchListOfValues!: () => ({}) | undefined;
 }
 </script>
 
