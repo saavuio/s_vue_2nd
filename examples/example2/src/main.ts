@@ -1,7 +1,7 @@
 import Vue from 'vue';
+import Vuetify from 'vuetify';
 import Index from './pages/index.vue';
 import store from './store';
-import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css';
 
 Vue.use(Vuetify);

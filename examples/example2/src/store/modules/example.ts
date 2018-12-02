@@ -12,7 +12,9 @@ import axios from 'axios';
 @Module({ namespaced: true, stateFactory: true })
 export default class ExampleStore extends VuexModule {
   listOfValues: Array<any> = [];
+
   singleValue: number = 123;
+
   loading: boolean = false;
 
   @Mutation

@@ -33,12 +33,16 @@ const exampleVuexModule = namespace('example');
 export default class Root extends Vue {
   @exampleVuexModule.State
   singleValue!: string | undefined;
+
   @exampleVuexModule.State
   listOfValues!: [] | undefined;
+
   @exampleVuexModule.State
   loading!: boolean | undefined;
+
   @exampleVuexModule.Action
   generateListOfValues!: () => ({}) | undefined;
+
   @exampleVuexModule.Action
   fetchListOfValues!: () => ({}) | undefined;
 }
