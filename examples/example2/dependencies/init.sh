@@ -5,4 +5,4 @@ cd $SCRIPT_DIR
 . ./helpers.sh
 
 # -- s_vue_2nd
-get "s_vue_2nd" "v4"
+get "s_vue_2nd" "v5"
