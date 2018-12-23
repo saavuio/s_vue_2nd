@@ -24,7 +24,6 @@ coverage
 # Dependency directories
 node_modules/
 node_modules.tar.bz2
-node_modules_cache
 
 # Optional eslint cache
 .eslintcache
@@ -46,5 +45,3 @@ dist
 
 # Temporary files
 tmp
-
-.nuxt

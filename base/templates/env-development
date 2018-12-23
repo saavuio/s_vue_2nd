@@ -1,1 +1,2 @@
-DEV_PORT=3007
+IDENTIFIER=example-app-ui
+DEV_PORT=34481

@@ -35,3 +35,4 @@ tsconfig.json
 # s_deps
 dependencies/s_*
 node_modules_app
+.webpack-cache

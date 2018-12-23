@@ -2,7 +2,7 @@
 RUN_DIR=$(pwd)
 cd $RUN_DIR
 
-IMAGE=saavu-local/s_vue_2nd_v5
+IMAGE=saavu-local/s_vue_2nd_v6
 
 RUN_DIR=$(pwd)
 
@@ -59,13 +59,17 @@ docker run \
   $DOCKER_PARAM_NAME \
   $DOCKER_PARAM_NET \
   $([ ! -z $PORT_TO_OPEN ] && echo "-p $PORT_TO_OPEN:$PORT_TO_OPEN") \
-  $([ -f $RUN_DIR/package.json ] && echo "--volume $RUN_DIR/package.json:/ext/package.json") \
-  $([ -d $RUN_DIR/node_modules ] && echo "--volume $RUN_DIR/node_modules:/s_vue_2nd/node_modules") \
-  $([ -d $RUN_DIR/node_modules_app ] && echo "--volume $RUN_DIR/node_modules_app:/ext/node_modules") \
-  $([ -f $RUN_DIR/env-development ] && echo "--volume $RUN_DIR/env-development:/s_vue_2nd/env-development") \
   $([ -d $RUN_DIR/src ] && echo "--volume $RUN_DIR/src:/s_vue_2nd/src") \
   $([ -d $RUN_DIR/dist ] && echo "--volume $RUN_DIR/dist:/s_vue_2nd/dist") \
   $([ -d $RUN_DIR/public ] && echo "--volume $RUN_DIR/public:/s_vue_2nd/public") \
+  $([ -f $RUN_DIR/package.json ] && echo "--volume $RUN_DIR/package.json:/ext/package.json") \
+  $([ -d $RUN_DIR/.webpack-cache ] && echo "--volume $RUN_DIR/.webpack-cache:/s_vue_2nd/.webpack-cache") \
+  $([ -d $RUN_DIR/node_modules_app ] && echo "--volume $RUN_DIR/node_modules_app:/ext/node_modules") \
+  $([ -f $RUN_DIR/env-development ] && echo "--volume $RUN_DIR/env-development:/s_vue_2nd/env-development") \
+  $([ -f $RUN_DIR/now.json ] && echo "--volume $RUN_DIR/now.json:/s_vue_2nd/now.json") \
+  $([ -f $RUN_DIR/.gitignore ] && echo "--volume $RUN_DIR/.gitignore:/s_vue_2nd/.gitignore") \
+  $([ -f $RUN_DIR/.npmignore ] && echo "--volume $RUN_DIR/.npmignore:/s_vue_2nd/.npmignore") \
+  $([ -f $RUN_DIR/.eslintignore ] && echo "--volume $RUN_DIR/.eslintignore:/s_vue_2nd/.eslintignore") \
   $([ -f $RUN_DIR/vue.config.js ] && echo "--volume $RUN_DIR/vue.config.js:/s_vue_2nd/vue.config.js") \
   --workdir $WORKDIR \
   --entrypoint sh \
