@@ -28,8 +28,8 @@ if [ ! -f .ejected ]; then
   echo "copy files from container..."
   #
   docker cp ${CONTAINER_NAME}:/$IMAGE_ID/.eslintrc.js ./
-  docker cp $CONTAINER_NAME:/$IMAGE_NAME/.prettierrc ./
-  docker cp $CONTAINER_NAME:/$IMAGE_NAME/tsconfig.json ./
+  docker cp ${CONTAINER_NAME}:/$IMAGE_ID/.prettierrc ./
+  docker cp ${CONTAINER_NAME}:/$IMAGE_ID/tsconfig.json ./
   #
   docker cp ${CONTAINER_NAME}:/$IMAGE_ID/node_modules.tar.bz2 ./
   echo "extract node_modules..."

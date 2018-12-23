@@ -13,7 +13,7 @@ cp s_vue_2nd_cache/node_modules.tar.bz2 s_vue_2nd/base
 mkdir ${PROJECT_ROOT_PATH}/src 2> /dev/null
 mkdir ${PROJECT_ROOT_PATH}/dist 2> /dev/null
 mkdir ${PROJECT_ROOT_PATH}/.webpack-cache 2> /dev/null
-touch ${PROJECT_ROOT_PATH}/src/index.js
+touch ${PROJECT_ROOT_PATH}/src/main.ts
 
 # link to self
 cp ./s_vue_2nd/base/templates/s_vue_2nd.sh ${PROJECT_ROOT_PATH}

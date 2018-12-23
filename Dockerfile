@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y vim
 
 RUN mkdir -p /s_vue_2nd/src && mkdir -p /ext/node_modules
 
-RUN yarn global add package-json-merge flow-typed --network-timeout 80000
+RUN yarn global add package-json-merge --network-timeout 80000
 
 ADD ./base /s_vue_2nd
 ADD ./scripts/entry.sh /entry.sh
