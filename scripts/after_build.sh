@@ -6,6 +6,6 @@ fi
 
 # remove previous build if exists
 rm -rf $PROJECT_ROOT_PATH/node_modules*
-rm $PROJECT_ROOT_PATH/.ejected
+rm -f $PROJECT_ROOT_PATH/.ejected
 
 $PROJECT_ROOT_PATH/scripts/build.sh
