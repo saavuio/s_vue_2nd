@@ -7,7 +7,7 @@ cd ..
 . ./env-development
 
 # bundle
-if [ ! -f dist/main.js ]; then
+if [ ! -d dist/builds ]; then
   echo "No build found. Building..."
   ./s_vue_2nd.sh yarn run build --mode development
 fi
