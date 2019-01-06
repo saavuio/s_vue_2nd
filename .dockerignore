@@ -3,3 +3,5 @@ dist
 src
 Dockerfile
 tmp
+base/update-deps.sh
+base/yarn.sh
