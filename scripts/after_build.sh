@@ -12,7 +12,7 @@ $PROJECT_ROOT_PATH/scripts/build.sh
 
 echo
 echo "To start with an example base, run:"
-echo "cp -a ./dependencies/s_vue_2nd/example3/src/* ./src"
-echo "cp -a ./dependencies/s_vue_2nd/example3/public ./"
+echo "cp -a ./dependencies/s_vue_2nd/examples/example3/src/* ./src"
+echo "cp -a ./dependencies/s_vue_2nd/examples/example3/public ./"
 echo "./s_vue_2nd.sh yarn add axios"
 echo
