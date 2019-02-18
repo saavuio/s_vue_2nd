@@ -67,6 +67,8 @@ docker run \
   $([ -d $RUN_DIR/node_modules_app ] && echo "--volume $RUN_DIR/node_modules_app:/ext/node_modules") \
   $([ -f $RUN_DIR/env-development ] && echo "--volume $RUN_DIR/env-development:/s_vue_2nd/env-development") \
   $([ -f $RUN_DIR/now.json ] && echo "--volume $RUN_DIR/now.json:/s_vue_2nd/now.json") \
+  $([ -f $RUN_DIR/staging.now.json ] && echo "--volume $RUN_DIR/now.json:/s_vue_2nd/staging.now.json") \
+  $([ -f $RUN_DIR/prod.now.json ] && echo "--volume $RUN_DIR/now.json:/s_vue_2nd/prod.now.json") \
   $([ -f $RUN_DIR/.gitignore ] && echo "--volume $RUN_DIR/.gitignore:/s_vue_2nd/.gitignore") \
   $([ -f $RUN_DIR/.npmignore ] && echo "--volume $RUN_DIR/.npmignore:/s_vue_2nd/.npmignore") \
   $([ -f $RUN_DIR/.eslintignore ] && echo "--volume $RUN_DIR/.eslintignore:/s_vue_2nd/.eslintignore") \

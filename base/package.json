@@ -5,6 +5,8 @@
   "scripts": {
     "start": "serve dist/builds",
     "serve": "vue-cli-service serve",
+    "staging-build": "NODE_ENV=staging vue-cli-service build",
+    "preview-build": "NODE_ENV=preview vue-cli-service build",
     "build": "NODE_ENV=production vue-cli-service build",
     "build-dev": "NODE_ENV=development vue-cli-service build --mode development",
     "lint": "vue-cli-service lint",
