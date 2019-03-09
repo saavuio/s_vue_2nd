@@ -2,7 +2,7 @@
 RUN_DIR=$(pwd)
 cd $RUN_DIR
 
-IMAGE=saavu-local/s_vue_2nd_v6
+IMAGE=saavu-local/s_vue_2nd_v7
 
 RUN_DIR=$(pwd)
 

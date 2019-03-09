@@ -4,7 +4,7 @@ if [ -z $PROJECT_ROOT_PATH ]; then
   exit 1
 fi
 
-VERSION=v6
+VERSION=v7
 rm -rf s_vue_2nd_cache
 git clone --single-branch -b $VERSION https://github.com/saavuio/s_vue_2nd_cache
 cp s_vue_2nd_cache/node_modules.tar.bz2 s_vue_2nd/base
