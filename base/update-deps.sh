@@ -14,7 +14,7 @@ tar cjf node_modules.tar.bz2 node_modules/
 echo "upload to seperate github repo"
 CACHE_DIR=node_modules_cache
 CACHE_REPO=git@github.com:saavuio/s_vue_2nd_cache.git
-VERSION=v6
+VERSION=v7
 
 if [ -d $CACHE_DIR ]; then
   rm -rf $CACHE_DIR
